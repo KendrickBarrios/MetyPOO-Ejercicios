@@ -1,4 +1,4 @@
-package notaUam;
+package notasUAM;
 
 import modelos.Estudiante;
 
@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("\u001B[32m");
+        System.out.print("\u001B[32m");
         System.out.println("UAM");
         // crear objeto estudiante
         Estudiante est = new Estudiante();
@@ -29,6 +29,7 @@ public class Main {
         System.out.print("Corte 3: ");
         nota3 = Integer.parseInt(sc.nextLine());
 
+        est.setCif(cif);
         est.setNombres(nombres);
         est.setApellidos(apellidos);
         est.setAsignatura(asignatura);
@@ -38,7 +39,14 @@ public class Main {
 
         nf = est.obtNotaFinal();
         System.out.println("Nota final: " + nf);
+        if (est.evalNotaFinal().equals("Aprobado.")) {
+            System.out.print("\u001B[34m");
+        } else {
+            System.out.print("\u001B[31m");
+        }
         System.out.println(est.evalNotaFinal());
+        System.out.print("\u001B[32m");
         System.out.println(est.evalConvocatoria());
     }
 }
+
