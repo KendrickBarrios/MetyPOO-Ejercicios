@@ -17,12 +17,12 @@ public class Circle {
         this.radius = radius;
     }
 
-    public double getRadio() {
+    public double getRadius() {
         return radius;
     }
 
-    public void setRadio(double radio) {
-        this.radius = radio;
+    public void setRadio(double radius) {
+        this.radius = radius;
     }
 
     public double getCircumference() {
