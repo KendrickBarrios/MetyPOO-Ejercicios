@@ -38,4 +38,15 @@ public class StudentDao implements Session9 {
             System.out.println(student);
         }
     }
+
+    public double calcMeanAge() {
+        double mean = 0;
+        if (!students.isEmpty()) {
+            for (Student student : students) {
+                mean += student.getAge();
+            }
+            return mean / students.size();
+        }
+        return mean;
+    }
 }

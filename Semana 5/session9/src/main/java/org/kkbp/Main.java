@@ -24,12 +24,13 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         int option = 0;
-        String menu = "1. Add student\n" +
+        String menu = "\n1. Add student\n" +
                 "2. Find student\n" +
                 "3. Show students\n" +
-                "4. Exit program\n" +
+                "4. Calculate student's mean age\n" +
+                "5. Exit program\n" +
                 "Enter you choice: ";
-        while (option != 4) {
+        while (option != 5) {
             System.out.println(menu);
             option = sc.nextInt();
 
@@ -53,6 +54,14 @@ public class Main {
                     students.showStudents();
                     break;
                 case 4:
+                    double meanAge = students.calcMeanAge();
+                    if (meanAge != 0) {
+                        System.out.println("Student's mean age: " + meanAge);
+                    } else {
+                        System.out.println("Student's list is empty.");
+                    }
+                    break;
+                case 5:
                     System.out.println("Thank you for using the program!");
                     break;
                 default:
